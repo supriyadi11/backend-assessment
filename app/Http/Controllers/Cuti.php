@@ -3,20 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Cuti as M_Cuti;
+use App\Http\Requests\StorePostRequest;
 use Illuminate\Http\Request;
 
 class Cuti extends Controller
 {
-    public function post(Request $request) {
+    public function post(StorePostRequest $request) {
         $user = $request->user();
         
         try {
-            $data=new M_Cuti();
-            $data->user_id=$user->id;
-            $data->alasan_cuti=$request->alasan_cuti;
-            $data->tgl_awal=$request->tgl_awal;
-            $data->tgl_akhir=$request->tgl_akhir;
-            $data->save();
+           
+            $post = M_Cuti::create($request->validated() + ['user_id' => $user->id]);
 
             return response()->json([
                 'status' => true,
