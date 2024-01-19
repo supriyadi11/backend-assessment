@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "e7399676-7721-4d46-be3c-30138e55fa64",
+		"name": "kerjoo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18960529"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "e",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "f",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "w",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/kerjoo/public/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"kerjoo",
+						"public",
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "test@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/kerjoo/public/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"kerjoo",
+						"public",
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "annual-leaves",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|ZXxfQWrGat0JOv3IDoMvQT1TXGueyzHJQXbftwrg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "alasan_cuti",
+							"value": "liburan",
+							"type": "text"
+						},
+						{
+							"key": "tgl_awal",
+							"value": "2024-01-20",
+							"type": "text"
+						},
+						{
+							"key": "tgl_akhir",
+							"value": "2024-01-22",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/kerjoo/public/api/annual-leaves",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"kerjoo",
+						"public",
+						"api",
+						"annual-leaves"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "annual-leaves-get",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|ZXxfQWrGat0JOv3IDoMvQT1TXGueyzHJQXbftwrg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/kerjoo/public/api/annual-leaves",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"kerjoo",
+						"public",
+						"api",
+						"annual-leaves"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "annual-leaves-getById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|ZXxfQWrGat0JOv3IDoMvQT1TXGueyzHJQXbftwrg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/kerjoo/public/api/annual-leaves/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"kerjoo",
+						"public",
+						"api",
+						"annual-leaves",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
